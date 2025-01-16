@@ -16,4 +16,4 @@ webform:
 
 launch:
   type: binary
-  command: /usr/bin/whatweb -a 3 {url_to_scan}
+  command: /usr/bin/whatweb -a 3 ${url_to_scan}
