@@ -1,0 +1,19 @@
+runner:
+  name: What is that Website?
+  description: Level 3 Scan (-a 3) Aggressive Can make a handful of HTTP requests per target. This triggers aggressive plugins for targets only when those plugins are identified with a level 1 request first.
+  version: 0.0.1
+
+build:
+  commands: |
+    echo "START: Building the runner"
+    apt install -y whatweb
+    echo "END: Building the runner"
+
+webform:
+  - name: url
+    prompt: URL
+    type: text
+
+launch:
+  type: binary
+  command: /usr/bin/whatweb -a 3 {url}
