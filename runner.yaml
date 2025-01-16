@@ -10,10 +10,10 @@ build:
     echo "END: Building the runner"
 
 webform:
-  - name: url
+  - name: url_to_scan
     prompt: URL
     type: text
 
 launch:
   type: binary
-  command: /usr/bin/whatweb -a 3 {url}
+  command: /usr/bin/whatweb -a 3 {url_to_scan}
